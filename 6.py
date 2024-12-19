@@ -111,4 +111,4 @@ async def bienvenida_error(ctx, error):
         await ctx.send("No tienes permisos💀🙏", delete_after=1)
 
 # Token del bot (asegúrate de mantenerlo privado)
-bot.run('MTI4MTY3NjM4MTk4NTQ0NDAyMw.GDlf6a.qNr3m2FKKMGv7x4s637Kz2qcqbmTD3sx5LUuOE')
+bot.run('MTI4MTY3NjM4MTk4NTQ0NDAyMw.G4LMOB.PhXdgynI9JpfNXF1KGazN648mBD6ZPAo7kspn4')
