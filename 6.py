@@ -1,9 +1,25 @@
+import json
+import os
 import discord
 from discord.ext import commands
 from discord.ui import Select, View
 import asyncio
 
-# Configurar los intents para recibir eventos del servidor
+# Cargar el TOKEN desde config.json
+with open("config.json", "r") as config_file:
+    config = json.load(config_file)
+
+# Obtener el token
+TOKEN = config.get("DISCORD_TOKEN")
+
+# Verificar que el token se haya cargado correctamente
+print(f"TOKEN leído: {TOKEN}")
+
+# Si el token es None, arrojar un error
+if not TOKEN:
+    raise ValueError("Error: TOKEN no encontrado en config.json.")
+
+# Configurar los intents
 intents = discord.Intents.default()
 intents.message_content = True  # Permite leer el contenido de los mensajes
 
@@ -110,5 +126,5 @@ async def bienvenida_error(ctx, error):
     if isinstance(error, commands.MissingRole):
         await ctx.send("No tienes permisos💀🙏", delete_after=1)
 
-# Token del bot (asegúrate de mantenerlo privado)
-bot.run('MTI4MTY3NjM4MTk4NTQ0NDAyMw.GDlf6a.qNr3m2FKKMGv7x4s637Kz2qcqbmTD3sx5LUuOE')
+# Ejecutar el bot con el token
+bot.run(TOKEN)

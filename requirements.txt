@@ -27,6 +27,7 @@ cx_Freeze==7.2.3
 cx_Logging==3.2.1
 darkdetect==0.8.0
 dearpygui==1.11.1
+discord==2.3.2
 discord.py==2.4.0
 discum==1.4.1
 dxcam==0.0.5
