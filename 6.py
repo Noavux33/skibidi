@@ -126,5 +126,10 @@ async def bienvenida_error(ctx, error):
     if isinstance(error, commands.MissingRole):
         await ctx.send("No tienes permisos💀🙏", delete_after=1)
 
+<<<<<<< HEAD
 # Ejecutar el bot con el token
 bot.run(TOKEN)
+=======
+# Token del bot (asegúrate de mantenerlo privado)
+bot.run('MTI4MTY3NjM4MTk4NTQ0NDAyMw.G4LMOB.PhXdgynI9JpfNXF1KGazN648mBD6ZPAo7kspn4')
+>>>>>>> b95604194243b80e5953a3ac102948d0357cce9b
